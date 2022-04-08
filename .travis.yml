@@ -15,7 +15,7 @@ after_success:
   - docker build -t aminezagh/multi-worker ./worker
 
   # log in to the docker CLI
-  - echo "$DOCKERPASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
    # take those images and push them to Docker hub
   - docker push aminezagh/multi-client
